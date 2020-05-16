@@ -40,6 +40,8 @@ typealias ServiceCallback = (ServiceResult) -> Void
 ///
 /// Implements common functionality for all service classess.
 class Service {
+    var cache: NSCache<NSString, UIImage>! = NSCache()
+    typealias ImageCacheLoaderCompletionHandler = ((UIImage?) -> ())
     
     func fetch(with url: URL, completion: @escaping ServiceCallback) {
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -64,5 +66,33 @@ class Service {
                 }
             }
         }.resume()
+    }
+    
+    func downloadImage(imagePath: String, completionHandler: @escaping ((UIImage?) -> ())) {
+        if let image = self.cache.object(forKey: imagePath as NSString) {
+            DispatchQueue.main.async {
+                completionHandler(image)
+            }
+        } else {
+            guard let url: URL = URL(string: imagePath) else {
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
+                return
+            }
+            
+            URLSession.shared.downloadTask(with: url, completionHandler: { (location, response, error) in
+                if let data = try? Data(contentsOf: url) {
+                    let img: UIImage! = UIImage(data: data)
+                    self.cache.setObject(img, forKey: imagePath as NSString)
+                    DispatchQueue.main.async {
+                        completionHandler(img)
+                    }
+                } else {  DispatchQueue.main.async {
+                    completionHandler(nil)
+                    }
+                }
+            }).resume()
+        }
     }
 }
