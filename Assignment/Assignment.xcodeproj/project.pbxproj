@@ -19,6 +19,7 @@
 		8CD1D1D9246FF92400AFC243 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1D8246FF92400AFC243 /* CountryService.swift */; };
 		8CD1D1DB246FFC1200AFC243 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1DA246FFC1200AFC243 /* MainViewModel.swift */; };
 		8CD1D1DD246FFCAE00AFC243 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1DC246FFCAE00AFC243 /* CountryModel.swift */; };
+		8CD1D1DF247001F600AFC243 /* CountryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1DE247001F600AFC243 /* CountryInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8CD1D1D8246FF92400AFC243 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
 		8CD1D1DA246FFC1200AFC243 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8CD1D1DC246FFCAE00AFC243 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		8CD1D1DE247001F600AFC243 /* CountryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				8CD1D1CC246FF0AC00AFC243 /* MainViewController.swift */,
+				8CD1D1DE247001F600AFC243 /* CountryInfoTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				8CD1D19B246FF00A00AFC243 /* SceneDelegate.swift in Sources */,
 				8CD1D1D4246FF5FE00AFC243 /* JSONDecoder + Decode.swift in Sources */,
 				8CD1D1CD246FF0AC00AFC243 /* MainViewController.swift in Sources */,
+				8CD1D1DF247001F600AFC243 /* CountryInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
