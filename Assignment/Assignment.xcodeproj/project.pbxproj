@@ -17,6 +17,7 @@
 		8CD1D1CD246FF0AC00AFC243 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1CC246FF0AC00AFC243 /* MainViewController.swift */; };
 		8CD1D1D1246FF52C00AFC243 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1D0246FF52C00AFC243 /* Service.swift */; };
 		8CD1D1D4246FF5FE00AFC243 /* JSONDecoder + Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1D3246FF5FE00AFC243 /* JSONDecoder + Decode.swift */; };
+		8CD1D1D9246FF92400AFC243 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1D8246FF92400AFC243 /* CountryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8CD1D1CC246FF0AC00AFC243 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8CD1D1D0246FF52C00AFC243 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8CD1D1D3246FF5FE00AFC243 /* JSONDecoder + Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder + Decode.swift"; sourceTree = "<group>"; };
+		8CD1D1D8246FF92400AFC243 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		8CD1D1C9246FF07E00AFC243 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				8CD1D1D7246FF90900AFC243 /* Public */,
 				8CD1D1CE246FF50100AFC243 /* Private */,
 			);
 			path = Domain;
@@ -180,6 +183,14 @@
 				8CD1D1D3246FF5FE00AFC243 /* JSONDecoder + Decode.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8CD1D1D7246FF90900AFC243 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1D1D8246FF92400AFC243 /* CountryService.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 			files = (
 				8CD1D19D246FF00A00AFC243 /* ViewController.swift in Sources */,
 				8CD1D199246FF00A00AFC243 /* AppDelegate.swift in Sources */,
+				8CD1D1D9246FF92400AFC243 /* CountryService.swift in Sources */,
 				8CD1D1D1246FF52C00AFC243 /* Service.swift in Sources */,
 				8CD1D19B246FF00A00AFC243 /* SceneDelegate.swift in Sources */,
 				8CD1D1D4246FF5FE00AFC243 /* JSONDecoder + Decode.swift in Sources */,
