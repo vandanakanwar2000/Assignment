@@ -16,8 +16,23 @@ class MainViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
-        
+        viewModel.delegate = self
         viewModel.fetchCountryInfo()
     }
     
+}
+
+extension MainViewController: MainViewModelDelegates {
+    func showErrors(errorMessage: String) {
+        //TODO: -
+    }
+    
+    func updateNavigationBarTitle(_ title: String) {
+        self.title = title
+    }
+    
+    func reloadView(details: [Details]) {
+        //TODO: -
+    }
+
 }
