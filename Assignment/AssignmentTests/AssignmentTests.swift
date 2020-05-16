@@ -14,7 +14,7 @@ class AssignmentTests: XCTestCase {
     let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json")!
     
     func testCountryInfoHappyPath() {
-        let service = MockService(mockPath: Stub.successFact.path)
+        let service = MockService(mockPath: Stub.successCountryInfo.path)
         let expectations = expectation(description: #function)
         service.fetch(url: url, result: CountryModel.self) { result in
             switch result {
@@ -29,7 +29,7 @@ class AssignmentTests: XCTestCase {
     }
     
     func testCountryInfoUnHappyPath() {
-        let service = MockService(mockPath: Stub.failureFact.path)
+        let service = MockService(mockPath: Stub.failureCountryInfo.path)
         let expectations = expectation(description: #function)
         service.fetch(url: url, result: CountryModel.self) { result in
             switch result {
@@ -44,7 +44,7 @@ class AssignmentTests: XCTestCase {
     }
     
     func testHappyPathForImageDownload() {
-        let service = MockService(mockPath: Stub.successFact.path)
+        let service = MockService(mockPath: Stub.successCountryInfo.path)
         let expectations = expectation(description: #function)
         service.loadImage(imagePath: "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg") { image in
             XCTAssertNotNil(image)
@@ -54,7 +54,7 @@ class AssignmentTests: XCTestCase {
     }
     
     func testUnHappyPathForImageDownload() {
-        let service = MockService(mockPath: Stub.successFact.path)
+        let service = MockService(mockPath: Stub.successCountryInfo.path)
         let expectations = expectation(description: #function)
         service.loadImage(imagePath: "") { image in
             XCTAssertNil(image)

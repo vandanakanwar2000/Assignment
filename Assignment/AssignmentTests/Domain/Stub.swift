@@ -9,8 +9,8 @@
 import XCTest
 
 enum Stub: String {
-    case successFact = "SuccessFact"
-    case failureFact = "FailureFact"
+    case successCountryInfo = "SuccessCountryInfo"
+    case failureCountryInfo = "FailureCountryInfo"
 
     var path: String? {
         return Bundle(for: MockService.self).path(forResource: rawValue,
