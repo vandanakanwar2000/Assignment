@@ -19,8 +19,6 @@ enum LocalizedString: CustomStringConvertible {
         case .alertOkButtonTitle:
             return localizeString("alertOkButtonTitle",
                                              comment: "alertOkButtonTitle")
-            
-            
         }
     }
 }
