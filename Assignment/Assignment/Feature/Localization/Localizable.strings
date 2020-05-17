@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Assignment
+
+  Created by Vandana Kanwar on 17/5/20.
+  Copyright © 2020 Vandana Kanwar. All rights reserved.
+*/
+
+"errorAlertTitle" = "Something went wrong";
+"alertOkButtonTitle" = "Ok";
+

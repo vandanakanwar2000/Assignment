@@ -13,6 +13,7 @@ class MainViewController: UITableViewController {
     let viewModel = MainViewModel()
     var countryRows: [Details] = []
     var refreshCtrl: UIRefreshControl!
+    let tableCellIdentifier = "countryInfoTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +25,14 @@ class MainViewController: UITableViewController {
     }
     
     func setupTableView() {
-        tableView.register(CountryInfoTableViewCell.self, forCellReuseIdentifier: "countryInfoTableViewCell")
+        tableView.register(CountryInfoTableViewCell.self, forCellReuseIdentifier: tableCellIdentifier)
         tableView.dataSource = self
         tableView.estimatedRowHeight = 144
         tableView.rowHeight = UITableView.automaticDimension
         
         refreshCtrl = UIRefreshControl()
-        refreshCtrl.addTarget(self, action: #selector(MainViewController.refreshTableView),
+        refreshCtrl.addTarget(self,
+                              action: #selector(MainViewController.refreshTableView),
                               for: .valueChanged)
         refreshControl = self.refreshCtrl
     }
@@ -44,7 +46,7 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "countryInfoTableViewCell",
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellIdentifier,
                                                  for: indexPath) as! CountryInfoTableViewCell
         cell.configureCell(countryRows[indexPath.row], nil)
         cell.selectionStyle = .none
@@ -76,7 +78,15 @@ extension MainViewController: MainViewModelDelegates {
         tableView.reloadData()
         refreshControl?.endRefreshing()
         
-        //TODO: - Show error in alert
+        let alert = UIAlertController(title: LocalizedString.errorAlertTitle.description,
+                                      message: errorMessage,
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: LocalizedString.alertOkButtonTitle.description,
+                                   style: .default,
+                                   handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true,
+                     completion: nil)
     }
     
     func updateNavigationBarTitle(_ title: String) {
