@@ -12,6 +12,7 @@ protocol MainViewModelDelegates: AnyObject {
     func reloadView(details: [Details])
     func updateNavigationBarTitle(_ title: String)
     func showErrors(errorMessage: String)
+    func updateCell(image: UIImage?, forIndex: IndexPath)
 }
 
 class MainViewModel: NSObject {
@@ -50,6 +51,14 @@ class MainViewModel: NSObject {
                 
                 self.delegate?.showErrors(errorMessage: errorMessage)
             }
+        }
+    }
+    
+    func fetchTileImage(imagePath: String, forIndex: IndexPath) {
+        
+        service.loadImage(imagePath: imagePath) { (image) in
+            self.delegate?.updateCell(image: image, forIndex: forIndex)
+            
         }
     }
 }

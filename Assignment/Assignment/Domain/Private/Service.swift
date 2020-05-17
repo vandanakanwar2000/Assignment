@@ -82,8 +82,8 @@ class Service {
             }
             
             URLSession.shared.downloadTask(with: url, completionHandler: { (location, response, error) in
-                if let data = try? Data(contentsOf: url) {
-                    let img: UIImage! = UIImage(data: data)
+                if let data = try? Data(contentsOf: url),
+                    let img = UIImage(data: data) {
                     self.cache.setObject(img, forKey: imagePath as NSString)
                     DispatchQueue.main.async {
                         completionHandler(img)

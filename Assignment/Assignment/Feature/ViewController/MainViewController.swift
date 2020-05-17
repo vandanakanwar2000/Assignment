@@ -46,12 +46,31 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryInfoTableViewCell",
                                                  for: indexPath) as! CountryInfoTableViewCell
-        //TODO: - Data binding with cell
+        cell.configureCell(countryRows[indexPath.row], nil)
+        cell.selectionStyle = .none
+        
+        guard let imageName = countryRows[indexPath.row].imageHref
+            else { return cell }
+        
+        viewModel.fetchTileImage(imagePath: imageName,
+                                 forIndex: indexPath)
+        
         return cell
     }
 }
 
 extension MainViewController: MainViewModelDelegates {
+    func updateCell(image: UIImage?, forIndex: IndexPath) {
+        
+        if let activeCell = tableView.cellForRow(at: forIndex) as? CountryInfoTableViewCell {
+            UIView.performWithoutAnimation {
+                tableView.beginUpdates()
+                activeCell.configureCell(countryRows[forIndex.row], image)
+                tableView.endUpdates()
+            }
+        }
+    }
+    
     func showErrors(errorMessage: String) {
         countryRows = []
         tableView.reloadData()
