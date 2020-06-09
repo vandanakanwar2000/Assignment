@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8CD1D199246FF00A00AFC243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D198246FF00A00AFC243 /* AppDelegate.swift */; };
-		8CD1D19B246FF00A00AFC243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D19A246FF00A00AFC243 /* SceneDelegate.swift */; };
-		8CD1D1A2246FF01000AFC243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD1D1A1246FF01000AFC243 /* Assets.xcassets */; };
 		8CD1D1A5246FF01000AFC243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD1D1A3246FF01000AFC243 /* LaunchScreen.storyboard */; };
 		8CD1D1B0246FF01100AFC243 /* AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1AF246FF01100AFC243 /* AssignmentTests.swift */; };
 		8CD1D1BB246FF01100AFC243 /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1BA246FF01100AFC243 /* AssignmentUITests.swift */; };
@@ -26,6 +24,7 @@
 		8CD1D1E924700AD200AFC243 /* SuccessCountryInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CD1D1E724700AD200AFC243 /* SuccessCountryInfo.json */; };
 		8CD1D1EF2470C30500AFC243 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CD1D1EE2470C30500AFC243 /* Localizable.strings */; };
 		8CD1D1F12470C31700AFC243 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1D1F02470C31700AFC243 /* LocalizedString.swift */; };
+		8CE1EDAF248F19FA00587A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CE1EDAE248F19FA00587A9F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +47,6 @@
 /* Begin PBXFileReference section */
 		8CD1D195246FF00A00AFC243 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD1D198246FF00A00AFC243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CD1D19A246FF00A00AFC243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CD1D1A1246FF01000AFC243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CD1D1A4246FF01000AFC243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CD1D1A6246FF01000AFC243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD1D1AB246FF01100AFC243 /* AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +68,7 @@
 		8CD1D1E724700AD200AFC243 /* SuccessCountryInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SuccessCountryInfo.json; sourceTree = "<group>"; };
 		8CD1D1EE2470C30500AFC243 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8CD1D1F02470C31700AFC243 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		8CE1EDAE248F19FA00587A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +122,9 @@
 				8CD1D1C9246FF07E00AFC243 /* Domain */,
 				8CD1D1C8246FF07000AFC243 /* Feature */,
 				8CD1D198246FF00A00AFC243 /* AppDelegate.swift */,
-				8CD1D19A246FF00A00AFC243 /* SceneDelegate.swift */,
-				8CD1D1A1246FF01000AFC243 /* Assets.xcassets */,
 				8CD1D1A3246FF01000AFC243 /* LaunchScreen.storyboard */,
 				8CD1D1A6246FF01000AFC243 /* Info.plist */,
+				8CE1EDAE248F19FA00587A9F /* Assets.xcassets */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -346,8 +343,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CD1D1A5246FF01000AFC243 /* LaunchScreen.storyboard in Resources */,
+				8CE1EDAF248F19FA00587A9F /* Assets.xcassets in Resources */,
 				8CD1D1EF2470C30500AFC243 /* Localizable.strings in Resources */,
-				8CD1D1A2246FF01000AFC243 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +377,6 @@
 				8CD1D1DD246FFCAE00AFC243 /* CountryModel.swift in Sources */,
 				8CD1D1D9246FF92400AFC243 /* CountryService.swift in Sources */,
 				8CD1D1D1246FF52C00AFC243 /* Service.swift in Sources */,
-				8CD1D19B246FF00A00AFC243 /* SceneDelegate.swift in Sources */,
 				8CD1D1D4246FF5FE00AFC243 /* JSONDecoder + Decode.swift in Sources */,
 				8CD1D1CD246FF0AC00AFC243 /* MainViewController.swift in Sources */,
 				8CD1D1DF247001F600AFC243 /* CountryInfoTableViewCell.swift in Sources */,
@@ -482,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -536,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -553,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85VRNJZT9L;
 				INFOPLIST_FILE = Assignment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,7 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85VRNJZT9L;
 				INFOPLIST_FILE = Assignment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,7 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85VRNJZT9L;
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85VRNJZT9L;
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85VRNJZT9L;
 				INFOPLIST_FILE = AssignmentUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,6 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85VRNJZT9L;
 				INFOPLIST_FILE = AssignmentUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
